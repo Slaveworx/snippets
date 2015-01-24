@@ -1,5 +1,13 @@
+# -*- coding: utf-8 -*-
 from pykeyboard import PyKeyboard
 from pymouse import PyMouse
+import time
+
+""" 
+ESTE SCRIPT PESQUISA AUTOMATICAMENTE UMA STRING NO GOOGLE
+Slaveworx - Tiago Galvão 2015 - Criado para testar o poder
+da biblioteca PyUserInput.
+"""
 
 
 k = PyKeyboard()
@@ -18,7 +26,7 @@ def escrever():
 	k.tap_key('space')
 	k.tap_key('i')
 	k.tap_key('s')
-	k.tap_key('space')python is powerfull
+	k.tap_key('space')
 	k.tap_key('p')
 	k.tap_key('o')
 	k.tap_key('w')
@@ -42,9 +50,12 @@ def pesquisar():
 def go():
 	m.click(758, 186)
 
-pesquisar()	
+pesquisar()
+time.sleep(2)	
 escrever()
+time.sleep(2)
 go()
+time.sleep(4)
 fechar()
 
 
