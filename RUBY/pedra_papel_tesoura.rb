@@ -1,6 +1,5 @@
 #encoding: ISO-8859-1
 
-
 #vai incluir a biblioteca colorize que permite imprimir string coloridas
 require 'colorize'
 
@@ -16,7 +15,7 @@ print "
 =======================================================
 ".bold.black
 
-#metodo que define um novo jogo
+#metodo que define um novo jogo -
 def novojogo
   $pontuacao = 0
   $saida = false
