@@ -17,25 +17,7 @@ print "ROBOT DE PESQUISA"
 
 
 def escrever():
-	k.tap_key('p')
-	k.tap_key('y')
-	k.tap_key('t')
-	k.tap_key('h')
-	k.tap_key('o')
-	k.tap_key('n')
-	k.tap_key('space')
-	k.tap_key('i')
-	k.tap_key('s')
-	k.tap_key('space')
-	k.tap_key('p')
-	k.tap_key('o')
-	k.tap_key('w')
-	k.tap_key('e')
-	k.tap_key('r')
-	k.tap_key('f')
-	k.tap_key('u')
-	k.tap_key('l')
-	k.tap_key('l')
+	k.type_string('Python is great!')
 	
 
 def fechar():
